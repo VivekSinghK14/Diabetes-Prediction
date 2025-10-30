@@ -11,10 +11,11 @@
     "import numpy as np\n",
     "import joblib\n",
     "\n",
+    "\n",
     "model = joblib.load('diabetes_model.joblib')\n",
     "scaler = joblib.load('scaler.joblib')\n",
     "\n",
-    "st.title(\"Diabetes Prediction App\")\n",
+    "st.title(\" Diabetes Prediction App\")\n",
     "\n",
     "st.write(\"Enter the patient details below:\")\n",
     "\n",
@@ -31,11 +32,12 @@
     "    features = np.array([[preg, glucose, bp, skin, insulin, bmi, dpf, age]])\n",
     "    features = scaler.transform(features)\n",
     "    prediction = model.predict(features)[0]\n",
-    "    \n",
+    "\n",
     "    if prediction == 1:\n",
     "        st.error(\" The patient is likely **Diabetic**\")\n",
     "    else:\n",
-    "        st.success(\" The patient is **Not Diabetic**\")\n"
+    "        st.success(\" The patient is **Not Diabetic**\")\n",
+    "\n"
    ]
   }
  ],
