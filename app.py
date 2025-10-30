@@ -3,14 +3,13 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "0e851551-8143-4f58-9948-4c9e368f81a8",
+   "id": "29f87bc3-3dd1-46f5-8597-873488cf032e",
    "metadata": {},
    "outputs": [],
    "source": [
     "import streamlit as st\n",
     "import numpy as np\n",
     "import joblib\n",
-    "\n",
     "\n",
     "model = joblib.load('diabetes_model.joblib')\n",
     "scaler = joblib.load('scaler.joblib')\n",
@@ -34,10 +33,9 @@
     "    prediction = model.predict(features)[0]\n",
     "\n",
     "    if prediction == 1:\n",
-    "        st.error(\" The patient is likely **Diabetic**\")\n",
+    "        st.error(\"The patient is likely Diabetic\")\n",
     "    else:\n",
-    "        st.success(\" The patient is **Not Diabetic**\")\n",
-    "\n"
+    "        st.success(\"The patient is Not Diabetic\")"
    ]
   }
  ],
