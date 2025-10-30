@@ -3,7 +3,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "29f87bc3-3dd1-46f5-8597-873488cf032e",
+   "id": "52abb4d3-ecc8-44ff-9711-370180180b75",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -15,7 +15,6 @@
     "scaler = joblib.load('scaler.joblib')\n",
     "\n",
     "st.title(\" Diabetes Prediction App\")\n",
-    "\n",
     "st.write(\"Enter the patient details below:\")\n",
     "\n",
     "preg = st.number_input(\"Pregnancies\", 0)\n",
@@ -33,9 +32,9 @@
     "    prediction = model.predict(features)[0]\n",
     "\n",
     "    if prediction == 1:\n",
-    "        st.error(\"The patient is likely Diabetic\")\n",
+    "        st.error(\" The patient is likely Diabetic\")\n",
     "    else:\n",
-    "        st.success(\"The patient is Not Diabetic\")"
+    "        st.success(\" The patient is Not Diabetic\")\n"
    ]
   }
  ],
